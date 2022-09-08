@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main(void)
-{
-	// this displayes the statement
+{i
+	/* this prints the statement below on the screen */
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
