@@ -1,25 +1,28 @@
-#include <stdio.h>
+#include <stdio.h> 
 
 /**
- * main - this function runs first before any other
+ * write - this function runs first before any other
+ * @filedes: this parameter is used by the write function
+ * @*buf: this is also used by the write funciton
+ * @nbyte: this specifies the amount of memory
 (*
  * Return: 0 if program runs successfully
  */
 
-main() 
 
-{
+int write(int filedes, const char *buf, unsigned int nbyte); 
 
-	char st[57] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"; 
+/**
+ * main - this function runs first before any other
+ * @argc: this parameter is used by the write function
+ * @argv: this is also used by the write funciton
+(*
+ * Return: 0 if program runs successfully
+ */
 
-	int n=0; 
+int main( int argc, char** argv ) 
+{ 
+   write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 60); 
 
-	while(st[n] != '\0') { 
-
-		putchar(st[n]); 
-
-		n++; 
-
-	} 
-	return (0);
+   return 0; 
 } 
