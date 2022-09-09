@@ -1,10 +1,16 @@
 #include <stdio.h>
 
+/**
+ * main - this function runs first before any other
+(*
+ * Return: 0 if program runs successfully
+ */
+
 main() 
 
 {
 
-char st[57] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"; 
+	char st[57] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"; 
 
 	int n=0; 
 
@@ -15,5 +21,5 @@ char st[57] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 		n++; 
 
 	} 
-
+	return (0);
 } 
