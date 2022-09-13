@@ -1,4 +1,4 @@
-#include <stdio.h> 
+#include <stdio.h>
 
 /**
  * write - this function runs first before any other
@@ -20,9 +20,9 @@ int write(int filedes, const char *buf, unsigned int nbyte);
  * Return: 0 if program runs successfully
  */
 
-int main( int argc, char** argv ) 
+int main(int argc, char **argv) 
 { 
    write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 60); 
 
-   return 0; 
+   return (0); 
 } 
