@@ -12,8 +12,9 @@ int main(void)
 {
 	int q = 'q';
 	int e = 'e';
+	int alpha;
 
-	for (int alpha = 'a'; alpha <= 'z'; alpha++)
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
 		if (alpha != q && alpha != e)
 		{

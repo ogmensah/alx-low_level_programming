@@ -10,7 +10,9 @@
  */
 int main(void)
 {
-	for (int num = 0; num < 16; num++)
+	int num;
+
+	for (num = 0; num < 16; num++)
 	{
 		putchar("x%"num);
 	}
