@@ -12,9 +12,17 @@ int main(void)
 {
 	int num;
 
+
 	for (num = 0; num < 16; num++)
 	{
-		putchar("x%"num);
+		if (num < 10)
+		{
+			putchar(num % 10 + '0');
+		}
+		else if (num > 9)
+		{
+			putchar(num + 87);
+		}
 	}
 	putchar('\n');
 	return (0);
