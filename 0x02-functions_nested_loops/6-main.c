@@ -8,7 +8,6 @@
  */
 int main(void)
 {
-    
 	int r;
 
 	r = _abs(-1);
