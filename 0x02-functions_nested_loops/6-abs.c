@@ -7,8 +7,11 @@
  */
 
 
-int _abs(int);
+int _abs(int y)
 {
-
-	return `(write(1, &c, 1));
+	if (y < 0)
+	{
+		y = -1 * y;
+	}
+	return (y);
 }
