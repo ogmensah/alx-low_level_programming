@@ -3,7 +3,7 @@
 /* more headers goes there */
 
 /**
- * _islower - it checks for lower case letter
+ * _isalpha - it checks for alphabet
  *@c: input character
  * Return: returns 1 when c is an alphabet  and 0 otherwise
  */
