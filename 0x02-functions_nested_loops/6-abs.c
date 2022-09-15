@@ -2,7 +2,7 @@
 
 /**
  * _abs - produces absolute values of an integer
- * @y - integer parameter
+ * @y: integer parameter
  * Return: On success 1.
  */
 
