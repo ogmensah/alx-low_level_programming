@@ -24,7 +24,8 @@ void more_numbers(void)
 		else
 		{
 			p = n - 48;
-			putchar(p % 10 + '0');
+			_putchar(1 + '0');
+			_putchar(p % 10 + '0');
 		}
 	}
 	_putchar('\n');
