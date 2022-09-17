@@ -11,7 +11,7 @@ void more_numbers(void)
 {
 	int n;
 	int a = 0;
-	int p;
+	int q;
 
 	for (; a < 10; a++)
 	{
@@ -19,15 +19,15 @@ void more_numbers(void)
 	{
 		if (n < 58)
 		{
-			_putchar(n);
+			q = n;
 		}
 		else
 		{
-			p = n - 48;
+			q = (n - 48) % 10 + '0';
 			_putchar(1 + '0');
-			_putchar(p % 10 + '0');
 		}
+		_putchar(q);
 	}
-	putchar('\n');
+	_putchar('\n');
 	}
 }
