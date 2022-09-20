@@ -4,7 +4,7 @@
 
 /**
  * reset_to_98 - changes the value of the imput integer to 98
- *@n: points to the imput integer when function is called
+ *@n: points to the input integer when function is called
  */
 
 void reset_to_98(int *n)
