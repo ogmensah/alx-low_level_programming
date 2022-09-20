@@ -3,22 +3,26 @@
 /* more headers goes there */
 
 /**
- * puts2 - prints and skip one
+ * puts_half - computes the length of a string
  *@str: points to the input string when function is called
  * Return: returns the length of the input string
  */
 
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int l = 0;
+	int n;
 
-	while (1)
+	for (; str[l] != '\0';)
 	{
-		if (str[l] == '\0')
-			break;
-		if (l % 2 == 0)
-			_putchar(str[l]);
 		l++;
+	}
+	n = l;
+	if (l != 0)
+		n = (l + 1) / 2;
+	for (; n <= l; n++)
+	{
+		_putchar(str[n]);
 	}
 	_putchar('\n');
 }
