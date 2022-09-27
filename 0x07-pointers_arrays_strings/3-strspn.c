@@ -14,39 +14,21 @@ unsigned int _strspn(char *s, char *accept)
 	int i;
 	int j = 0;
 	char c;
-	int foundfirst = 0;
-	int nbytes = 0;
-	int mcounts;
 
-	for (; s[j] != '\0';)
+	for (; s[j] != '\0'; j++)
 	{
 		c = s[j];
 		for (i = 0; accept[i] != '\0'; i++)
 		{
-			if (s[i] == c && !foundfirst)
+			if (accept[i] == c)
 			{
-				foundfirst = 1;
-				mcounts += 1;
-				break;
-			}
-			else if (s[i] == c && foundfirst)
-			{
-				mcounts += 1;
 				break;
 			}
 		}
-		if (!foundfirst)
+		if (accept[i] == '\0')
 		{
-			j++;
-		}
-		else if (foundfirst && j != 0)
-		{
-			j--;
-			continue;
-		}
-		else if (foundfirst && j == 0)
 			break;
+		}
 	}
-	nbytes = mcounts * sizeof(char);
-	return (nbytes);
+	return (j);
 }
