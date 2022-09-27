@@ -14,12 +14,15 @@ char *_strchr(char *s, char c)
 	int i = 0;
 	char *cha = NULL;
 
-	for (; s[i] != '\0'; i++)
+	if (sizeof(c) == sizeof(char))
 	{
-		if (s[i] == c)
+		for (; s[i] != '\0'; i++)
 		{
-			cha = &s[i];
-			break;
+			if (s[i] == c)
+			{
+				cha = &s[i];
+				break;
+			}
 		}
 	}
 	return (cha);
