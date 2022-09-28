@@ -9,44 +9,21 @@
  * Return: returns pointer to found character or NULL when not found
  */
 
-unsigned int _strspn(char *s, char *accept)
+void print_chessboard(char (*a)[8])
 {
-	int i;
-	int j = 0;
-	char c;
-	int foundfirst = 0;
-	int nbytes = 0;
-	int mcounts;
 
-	for (; s[j] != '\0';)
+	int i = 0;
+	int j = 0;
+	char *b[8];
+	while (j < 8)
 	{
-		c = s[j];
-		for (i = 0; accept[i] != '\0'; i++)
+		b = a[j];
+		while (i < 8)
 		{
-			if (s[i] == c && !foundfirst)
-			{
-				foundfirst = 1;
-				mcounts += 1;
-				break;
-			}
-			else if (s[i] == c && foundfirst)
-			{
-				mcounts += 1;
-				break;
-			}
+			_putchar(*b[i]);
+			i++;
 		}
-		if (!foundfirst)
-		{
-			j++;
-		}
-		else if (foundfirst && j != 0)
-		{
-			j--;
-			continue;
-		}
-		else if (foundfirst && j == 0)
-			break;
+		_putchar('\n');
+		j++;
 	}
-	nbytes = mcounts * sizeof(char);
-	return (nbytes);
 }
