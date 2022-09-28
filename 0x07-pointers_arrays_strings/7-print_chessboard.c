@@ -3,10 +3,8 @@
 /* more headers goes there */
 
 /**
- * _strspn - gets the length of prestring substring
- *@s: input string
- *@accept: query character
- * Return: returns pointer to found character or NULL when not found
+ * print_chessboard - prints a chessboard contaning characters
+ *@a: input array
  */
 
 void print_chessboard(char (*a)[8])
@@ -15,6 +13,7 @@ void print_chessboard(char (*a)[8])
 	int i = 0;
 	int j = 0;
 	char *b[8];
+
 	while (j < 8)
 	{
 		b = a[j];
