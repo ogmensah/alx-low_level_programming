@@ -5,9 +5,8 @@
 
 /**
  * _sqrt_recursion - computes the square root of numbers
- * @x: input base number
- * @y: exponent
- * Return: value of x exponent y
+ * @n: input number
+ * Return: returns natural square root of input number
  */
 
 int _sqrt_recursion(int n)
