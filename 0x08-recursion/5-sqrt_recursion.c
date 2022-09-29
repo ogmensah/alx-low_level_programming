@@ -4,20 +4,19 @@
 /* more headers goes there */
 
 /**
- * _pow_recursion - computes the power of numbers
+ * _sqrt_recursion - computes the square root of numbers
  * @x: input base number
  * @y: exponent
  * Return: value of x exponent y
  */
 
-int _pow_recursion(int x, int y)
+int _sqrt_recursion(int n)
 {
-	if (y < 0)
+	if (n < 0)
 		return (-1);
-
-	if (y != 0)
+	if (n == 1)
+		return (1);
+	if (y /  != n)
 	{
-		return (x * _pow_recursion(x, --y));
 	}
-	return (1);
-}
+	return (_sqrt_recursion(n));
