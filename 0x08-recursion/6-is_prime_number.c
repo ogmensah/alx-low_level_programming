@@ -4,9 +4,9 @@
 /* more headers goes there */
 
 /**
- * _strlen_recursion - computes length of a string
- * @s: pointer to input string
- * Return: returns NULL
+ * is_prime_number - identifies prime number
+ * @n: input number
+ * Return: returns 1 for prime numbers and 0 otherwise
  */
 
 int is_prime_number(int n)
