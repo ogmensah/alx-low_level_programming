@@ -7,10 +7,11 @@
 /**
  * main - prints the name of the program
  * @argc: the number of parameters passed during execusion
+ * @argv: the list of parameters passed during execusion
  * Return: returns 0 if program runs successfully
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	(void) argv;
 	printf("%d\n", argc);
