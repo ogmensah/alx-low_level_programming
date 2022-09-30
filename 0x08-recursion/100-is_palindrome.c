@@ -9,11 +9,35 @@
  * Return: returns NULL
  */
 
-int _strlen_recursion(char *s)
+void _print_rev_recursion(char *s)
+{
+        if (*s)
+        {
+                _print_rev_recursion(s + 1);
+                _putchar(*s);
+                return;
+        }
+
+}
+
+void _puts_recursion(char *s)
+{
+        if (*s == '\0')
+        {
+                _putchar('\n');
+                return;
+        }
+        _putchar(*(s));
+        s++;
+        _puts_recursion(s);
+
+}
+
+int is_palindrome(char *s)
 {
 	if (*(s) == '\0')
 	{
-		return (0);
+		return;
 	}
 	return (1 + _strlen_recursion(++s));
 }
