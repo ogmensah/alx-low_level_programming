@@ -11,7 +11,7 @@
  * Return: returns 0 if program runs successfully
  */
 
-int main(int __attribute__((unused)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i = 1;
