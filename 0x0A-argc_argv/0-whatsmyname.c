@@ -11,7 +11,7 @@
  * Return: returns 0 if program runs successfully
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__((unused)) argc, char *argv[])
 {
 	(void) argc;
 	printf("%s\n", argv[0]);
