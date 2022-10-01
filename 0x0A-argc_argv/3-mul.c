@@ -11,8 +11,13 @@
  * Return: returns 0 if program runs successfully
  */
 
-int main(int __attribute__((unused)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
+	if (argc == 3)
+	{
+		printf("Error");
+		return (1);
+	}
 	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
