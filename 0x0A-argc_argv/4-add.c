@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "main.h"
 /* more headers goes there */
 
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 
 	for (; i < argc; i++)
 	{
-		if (isdigit(argv[i]))
+		if (isdigit(*argv[i]) == 0)
 		{
 			printf("Error\n");
 			return (1);
