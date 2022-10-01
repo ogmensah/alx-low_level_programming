@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 		if (atoi(argv[i]) >= 0)
-		*ptr += atoi(argv[i]);
+			*ptr += atoi(argv[i]);
 	}
 	printf("%d\n", *ptr);
 	return (0);
