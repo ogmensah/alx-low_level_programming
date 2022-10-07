@@ -1,1 +1,1 @@
-C scripts for various functions
+Cfiles to accomplish specific functions

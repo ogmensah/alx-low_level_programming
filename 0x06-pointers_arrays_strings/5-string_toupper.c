@@ -5,23 +5,27 @@
 
 /**
  * string_toupper - changes lower case to upper case
+ * @n: the input string or letter
  * Return: returned pointer of string copy
  */
 
 char *string_toupper(char *n)
 {
-	int u = sizeof(n) / sizeof(char);
-	char *b = (char *) malloc(sizeof(char) * n);
-	int w = 0;
+	int p = 0;
+	int l = 0;
+	char *m;
 
-	for (; u > 0; u--)
+	for (;n[p] != '\0'; p++)
 	{
-		b[w] = a[u - 1];
-		w++;
 	}
-	for (w = 0; w < n; w++)
+
+	m = (char *) malloc(sizeof(char) * p);
+	
+	for (;n[l] != '\0' && n[l] >= 97 && n[l] <= 122; l++)
 	{
-		a[w] = b[w];
+		printf("%",(char) n[l]);
+		m[l] = n[l] - 33;
+		printf("%s",(char) m[l]);
 	}
-	free(b);
+	return (m);
 }
