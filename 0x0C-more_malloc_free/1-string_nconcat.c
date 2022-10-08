@@ -4,19 +4,49 @@
 /* more headers goes there */
 
 /**
- * malloc_checked - copies src into dest
- *@b: size of the memory to allocated
- *Return: returns pointer to first byte of the memory
+ * string_nconcat - copies src into dest
+ *@s1: string 1
+ *@s2: string 2
+ *@n: number of bytes
+ *Return: pointer to concatenated string
  */
 
-void *malloc_checked(unsigned int b)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int *l;
+	char *l;
+	unsigned int p = 0;
+	unsigned int k = 0;
+	unsigned int i;
+	unsigned int j;
 
-	l = malloc(b);
+	n = n / sizeof(char);
+	do {
+		p++;
+	} while (s1[p] != '\0');
+
+	do {
+		k++;
+	} while (s2[k] != '\0');
+
+	if (k <= n)
+		l = malloc(k + p + 1);
+	if (k > n)
+	{
+		k = n;
+		l = malloc(n + p + 1);
+	}
 	if (l == NULL)
 	{
-		exit(98);
+		return (NULL);
 	}
+	for (i = 0; i < p; i++)
+	{
+		l[i] = s1[i];
+	}
+	for (j = 0; j < k; j++)
+	{
+		l[i + j] = s2[j];
+	}
+	l[i + j] = '\0';
 	return (l);
 }
