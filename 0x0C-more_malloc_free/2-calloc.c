@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "main.h"
 /* more headers goes there */
 
@@ -17,6 +18,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
+	}
+	if (nmemb * size > UINT_MAX)
+	{
+		exit(1);
 	}
 	l = malloc(nmemb * size);
 	if (l == NULL)
