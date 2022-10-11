@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct my_struct - Short description
@@ -13,4 +14,4 @@ typedef struct dog
 	char * name;
 	float age;
 	char * owner;
-};
+} dog;
