@@ -1,17 +1,23 @@
+#ifndef DOG
+#define DOG
+
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * struct my_struct - Short description
- * @a: First member
- * @b: Second member
- * @c: Third member
+ * struct dog - defines characteristic of dog
+ * @name: name of the dog
+ * @age: age
+ * @owner: name of the dog's owner
  *
- * Description: Longer description
+ * Description: this stores attributes of dog
  */
+
 typedef struct dog
 {
-	char * name;
+	char *name;
 	float age;
-	char * owner;
+	char *owner;
 } dog;
+
+#endif /* DOG */
