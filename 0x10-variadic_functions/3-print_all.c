@@ -16,11 +16,19 @@ void print_all(const char * const format, ...)
 	char *var;
 
 	va_start(ap, 9);
-	while (i < 9)
+	while (j < 9)
 	{
-		while (
-
-		var = va_arg(ap, format[i]);
+		while(i++)
+		{
+		if (format[i] == 'c')
+			var = va_arg(ap, char); break;
+		if (format[i] == 'i')
+			var = va_arg(ap, int); break;
+		if (format[i] == 'c')
+			var = va_arg(ap, float); break;
+		if (format[i] == 'c')
+			var = va_arg(ap, char *); break;
+		}
 		if (var == NULL)
 		{
 			printf("(nil)");
@@ -32,6 +40,7 @@ void print_all(const char * const format, ...)
 		if (separator != NULL && i < (n - 1))
 			printf("%s", separator);
 		i++;
+		j++;
 	}
 	va_end(ap);
 	putchar('\n');
