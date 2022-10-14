@@ -4,9 +4,8 @@
 
 
 /**
- * print_strings - prints all the parameters
- * @separator: delimiter of printed parameters
- * @n: argument
+ * print_all - prints all the parameters
+ * @format: list of format of arguments
  * Return: returns nothing
  *
  */
@@ -17,7 +16,7 @@ void print_all(const char * const format, ...)
 	char *var;
 
 	va_start(ap, 9);
-	while (i < n)
+	while (i < 9)
 	{
 		while (
 
