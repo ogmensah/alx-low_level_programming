@@ -13,35 +13,29 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	unsigned int i = 0;
-	char *var;
 
-	va_start(ap, 9);
-	while (j < 9)
+	va_start(ap, format);
+	while (format[i] != '\0')
 	{
-		while(i++)
+		while (format[i] == 'i' || format[i] == 'c')
 		{
-		if (format[i] == 'c')
-			var = va_arg(ap, char); break;
-		if (format[i] == 'i')
-			var = va_arg(ap, int); break;
-		if (format[i] == 'c')
-			var = va_arg(ap, float); break;
-		if (format[i] == 'c')
-			var = va_arg(ap, char *); break;
+			if (format[i] == 'i')
+			{
+				printf("%d", va_arg(ap, int));
+				i++;
+				break;
+			}
+			printf("%c", va_arg(ap, int));
+			i++;
+			break;
 		}
-		if (var == NULL)
+		if (format[i] == 'f')
 		{
-			printf("(nil)");
+			printf("%f", va_arg(ap, double));
+			i++;
+			continue;
 		}
-		else
-		{
-			printf("%s", var);
-		}
-		if (separator != NULL && i < (n - 1))
-			printf("%s", separator);
+		printf("%s", va_arg(ap, char *));
 		i++;
-		j++;
 	}
-	va_end(ap);
-	putchar('\n');
 }
