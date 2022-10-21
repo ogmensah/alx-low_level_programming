@@ -17,10 +17,12 @@ size_t print_list(const list_t *h)
 		if (current_node->str != NULL)
 		{
 			printf("[0] (nil)");
+			if(i == 2)
+				break;
 		}
 		else
 		{
-			printf("%s ", current_node->str);
+			printf("%s\n", current_node->str);
 			current_node = current_node->next;
 		}
 		i++;
