@@ -14,11 +14,10 @@ size_t print_list(const list_t *h)
 
 	while (current_node != NULL)
 	{
-		if (current_node->str != NULL)
+		if (current_node->str == NULL)
 		{
 			printf("[0] (nil)");
 			if(i == 2)
-				break;
 		}
 		else
 		{
