@@ -9,10 +9,10 @@
  */
 size_t print_list(const list_t *h)
 {
-	int i = 0;
+	unsigned int i = 0;
 	const list_t *current_node = h;
 
-	while (current_node != NULL && i < 10)
+	while (current_node != NULL)
 	{
 		if (current_node->str == NULL)
 		{
