@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- *pop_listnint - removes head node of linked list
+ *pop_listint - removes head node of linked list
  *@head: a struct pointer
  *Return: returns head node's data.
  */
