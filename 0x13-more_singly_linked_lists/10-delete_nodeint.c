@@ -3,18 +3,17 @@
 #include "lists.h"
 
 /**
- *insert_nodeint_at_index - searches for node at index
- *@idx: the position of the node
- *@n: value to be inserted in the new node
+ *delete_nodeint_at_index - searches for node at index
+ *@index: the position of the node
  *@head: a struct pointer
- *Return: returns number of nodes
+ *Return: returns 1 for successful or -1 for unsuccessful
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned long i = 0;
 	listint_t *current_node, *temp;
+
 	temp = *head;
-	
 	if (*head == NULL)
 		return (-1);
 
