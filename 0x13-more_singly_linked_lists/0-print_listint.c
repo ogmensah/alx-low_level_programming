@@ -21,5 +21,6 @@ size_t print_listint(const listint_t *h)
 		current_node = current_node->next;
 		i++;
 	}
+	free((void *)current_node);
 	return (i);
 }
