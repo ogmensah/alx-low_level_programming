@@ -7,20 +7,28 @@
  *@head: a struct pointer
  *Return: returns nothing
  */
+listint_t *revpoint(listint_t **nd);
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *current = *head;
-	listint_t *nextt = NULL;
 	listint_t *prev = NULL;
 
-	while (current != NULL)
-	{
-		nextt = current->next;
-		current->next = prev;
-		prev = current;
-		current = nextt;
-
-	}
+	prev = revpoint(&current);
 	*head = prev;
 	return (prev);
+}
+
+listint_t *revpoint(listint_t **nd)
+{
+	listint_t *nex, *pre, *node;
+
+	node = *nd;
+	while (node != NULL)
+	{
+		nex = node->next;
+		node->next = pre;
+		pre = node;
+		node = nex;
+	}
+	return (pre);
 }
