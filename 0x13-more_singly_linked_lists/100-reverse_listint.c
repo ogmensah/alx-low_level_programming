@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- *free_listint2 - deletes list and sets head to NULL
+ *reverse_listint - reverses singly linked list
  *@head: a struct pointer
  *Return: returns nothing
  */
