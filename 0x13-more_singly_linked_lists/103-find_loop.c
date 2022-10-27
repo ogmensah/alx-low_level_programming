@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * find_listint_loop_ - searches for a loop in a linked list
+ * find_listint_loop - searches for a loop in a linked list
  * @head: linked list to search
  * Return: address of node where loop starts/returns, NULL if no loop
  */
