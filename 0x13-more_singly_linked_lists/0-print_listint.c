@@ -9,13 +9,13 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t i = 0;
+	size_t i;
 	const listint_t *current_node;
 
 	if (h == NULL)
 		return (0);
 	current_node = h;
-	for (current_node = h; current_node != NULL; current_node = current_node->next, i++)
+	for (i = 0; current_node != NULL; current_node = current_node->next, i++)
 	{
 		printf("%d\n", current_node->n);
 	}
