@@ -9,7 +9,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	unsigned long i = 0;
+	size_t i = 0;
 	const listint_t *current_node;
 
 	if (h == NULL)
