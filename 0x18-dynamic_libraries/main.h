@@ -1,4 +1,4 @@
-#ifdef _SHARED_LIB_H_
+#ifndef _SHARED_LIB_H_
 #define _SHARED_LIB_H_
 #ifndef _PUTCHAR
 #define _PUTCHAR
@@ -7,6 +7,8 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+#define EXIT_SUCCESS 0
 
 int _putchar(char c);
 int _islower(int c);
