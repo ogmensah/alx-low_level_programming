@@ -12,8 +12,11 @@ size_t print_list(const list_t *h)
 	unsigned long i = 0;
 	const list_t *current_node;
 
+	if (h == NULL)
+		return (0);
+
 	current_node = h;
-	while (current_node != NULL)
+	while (current_node != NULL && i < 10)
 	{
 		if (current_node->str == NULL)
 		{
